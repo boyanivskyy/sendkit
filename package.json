@@ -3,7 +3,8 @@
     "private": true,
     "type": "module",
     "workspaces": [
-        "packages/*"
+        "packages/*",
+        "apps/*"
     ],
     "scripts": {
         "dev:cli": "bun run packages/cli/src/index.ts",
