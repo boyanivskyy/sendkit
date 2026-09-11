@@ -8,15 +8,21 @@
         "@types/node": "^26.5.0",
       },
     },
+    "apps/remote-mcp": {
+      "name": "sendkit-remote-mcp",
+      "version": "0.0.0",
+      "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.30.0",
+        "hono": "^4.13.7",
+        "sendkit-core": "workspace:*",
+      },
+    },
     "packages/cli": {
       "name": "sendkit",
       "version": "0.0.0",
       "dependencies": {
         "commander": "^15.0.0",
         "sendkit-core": "workspace:*",
-      },
-      "devDependencies": {
-        "@types/node": "^26.5.0",
       },
     },
     "packages/core": {
@@ -194,6 +200,8 @@
     "sendkit-core": ["sendkit-core@workspace:packages/core"],
 
     "sendkit-mcp": ["sendkit-mcp@workspace:packages/local-mcp"],
+
+    "sendkit-remote-mcp": ["sendkit-remote-mcp@workspace:apps/remote-mcp"],
 
     "serve-static": ["serve-static@2.2.1", "", { "dependencies": { "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "parseurl": "^1.3.3", "send": "^1.2.0" } }, "sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw=="],
 

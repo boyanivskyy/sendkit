@@ -6,8 +6,5 @@
     "dependencies": {
         "commander": "^15.0.0",
         "sendkit-core": "workspace:*"
-    },
-    "devDependencies": {
-        "@types/node": "^26.5.0"
     }
 }
