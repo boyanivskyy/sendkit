@@ -6,12 +6,11 @@ import { z } from 'zod';
 import { Command } from 'commander';
 import { sendTelegramMessage } from 'sendkit-core';
 
-
 const program = new Command();
 const configPath = join(homedir(), '.config', 'sendkit', 'config.json');
 
 const cliConfigSchema = z.object({
-  telegramBotToken: z.string().min(1).optional()
+  telegramBotToken: z.string().min(1).optional(),
 });
 
 function writeTelegramToken(token: string): void {
@@ -23,33 +22,30 @@ function writeTelegramToken(token: string): void {
 }
 
 function getTelegramToken(): string {
-  if(!existsSync(configPath)) {
-    throw new Error('Telegram bot token is required. Run `sendkit init`.')
+  if (!existsSync(configPath)) {
+    throw new Error('Telegram bot token is required. Run `sendkit init`.');
   }
 
   const config = cliConfigSchema.parse(JSON.parse(readFileSync(configPath, 'utf8')));
   const token = config.telegramBotToken;
 
   if (!token) {
-    throw new Error('Telegram bot token is required. Run `sendkit init`.')
+    throw new Error('Telegram bot token is required. Run `sendkit init`.');
   }
 
   return token;
 }
 
-program
-  .name('sendkit')
-  .description('SendKit CLI backed by sendkit-core');
+program.name('sendkit').description('SendKit CLI backed by sendkit-core');
 
 program
   .command('init')
   .description('Configure SendKit CLI local settings')
-  .requiredOption('--telegram-bot-token <botToken>', "Telegram bot token")
-  .action(async (options: {telegramBotToken: string}) => {
+  .requiredOption('--telegram-bot-token <botToken>', 'Telegram bot token')
+  .action(async (options: { telegramBotToken: string }) => {
     writeTelegramToken(options.telegramBotToken);
     console.log(`Save SendKit CLI config to ${configPath}`);
   });
-
 
 program
   .command('telegram')
@@ -60,8 +56,8 @@ program
     const result = await sendTelegramMessage({
       botToken: getTelegramToken(),
       chatId,
-      message
-    })
+      message,
+    });
 
     console.log(JSON.stringify(result));
   });
