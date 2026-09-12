@@ -41,7 +41,10 @@
     },
     "packages/local-mcp": {
       "name": "@boyanivskyy-packages/sendkit-mcp",
-      "version": "0.0.0",
+      "version": "0.0.1",
+      "bin": {
+        "sendkit-mcp": "./dist/index.js",
+      },
       "dependencies": {
         "@boyanivskyy-packages/sendkit-core": "workspace:*",
         "@modelcontextprotocol/sdk": "^1.30.0",

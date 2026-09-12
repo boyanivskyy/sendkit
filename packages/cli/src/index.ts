@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
