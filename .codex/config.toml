@@ -1,0 +1,5 @@
+[mcp_servers.sendkit]
+command = "bun"
+args = ["run", "dev:local-mcp"]
+cwd = "/Users/vitaliy.boyanivskyy@intellias.com/my-projects/sendkit"
+env_vars = ["TELEGRAM_BOT_TOKEN"]
