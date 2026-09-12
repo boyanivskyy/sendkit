@@ -4,7 +4,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 import { z } from 'zod';
 import { Command } from 'commander';
-import { sendTelegramMessage } from 'sendkit-core';
+import { sendTelegramMessage } from '@boyanivskyy-packages/sendkit-core';
 
 const program = new Command();
 const configPath = join(homedir(), '.config', 'sendkit', 'config.json');
