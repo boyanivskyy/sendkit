@@ -25,7 +25,7 @@
     },
     "packages/cli": {
       "name": "@boyanivskyy-packages/sendkit",
-      "version": "0.0.0",
+      "version": "0.0.1",
       "dependencies": {
         "@boyanivskyy-packages/sendkit-core": "workspace:*",
         "commander": "^15.0.0",
@@ -34,14 +34,14 @@
     },
     "packages/core": {
       "name": "@boyanivskyy-packages/sendkit-core",
-      "version": "0.0.0",
+      "version": "0.0.1",
       "dependencies": {
         "zod": "^4.6.1",
       },
     },
     "packages/local-mcp": {
       "name": "@boyanivskyy-packages/sendkit-mcp",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "bin": {
         "sendkit-mcp": "./dist/index.js",
       },
