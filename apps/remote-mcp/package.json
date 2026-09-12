@@ -7,10 +7,10 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@boyanivskyy-packages/sendkit-core": "workspace:*",
     "@clerk/backend": "^3.17.2",
     "@clerk/mcp-tools": "^0.6.0",
     "@modelcontextprotocol/sdk": "^1.30.0",
-    "hono": "^4.13.7",
-    "sendkit-core": "workspace:*"
+    "hono": "^4.13.7"
   }
 }

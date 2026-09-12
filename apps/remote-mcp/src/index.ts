@@ -4,7 +4,10 @@ import { generateClerkProtectedResourceMetadata } from '@clerk/mcp-tools/server'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { WebStandardStreamableHTTPServerTransport } from '@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js';
 
-import { sendTelegramMessage, telegramMessageInputSchema } from 'sendkit-core';
+import {
+  sendTelegramMessage,
+  telegramMessageInputSchema,
+} from '@boyanivskyy-packages/sendkit-core';
 
 const clerkPublishableKey = process.env.CLERK_PUBLISHABLE_KEY;
 const clerkSecreteKey = process.env.CLERK_SECRET_KEY;
